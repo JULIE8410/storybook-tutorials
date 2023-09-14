@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Flex, Text, Button, Theme } from "@radix-ui/themes";
+import RadixButton from "./stories/RadixButton";
+import "@radix-ui/themes/styles.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Theme>
+      <Flex direction="column" gap="3" align="center">
+        <Text>Hello from Radix Themes :)</Text>
+        <Text>Basic Buttons</Text>
+        <Button size="2" variant="classic">
+          Let's go!!
+        </Button>
+        <Button size="3" radius="small" color="blue">
+          Here we go!!
+        </Button>
+      </Flex>
+      <Text>My Radix Button</Text>
+      <RadixButton text="Submit" color="red"></RadixButton>
+    </Theme>
   );
 }
 
