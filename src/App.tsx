@@ -1,24 +1,26 @@
-import React from "react";
-import "./App.css";
-import { Flex, Text, Button, Theme } from "@radix-ui/themes";
-import RadixButton from "./stories/RadixButton";
+import { Flex, Text, Button, Theme, Avatar } from "@radix-ui/themes";
+import CustomButton from "./components/Button.component";
 import "@radix-ui/themes/styles.css";
+import InvoicePaid from "./components/InvoicePaid.component";
 
 function App() {
   return (
     <Theme>
       <Flex direction="column" gap="3" align="center">
-        <Text>Hello from Radix Themes :)</Text>
-        <Text>Basic Buttons</Text>
+        <br />
+        <Avatar
+          src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?&w=64&h=64&dpr=2&q=70&crop=focalpoint&fp-x=0.5&fp-y=0.3&fp-z=1&fit=crop"
+          fallback="success"
+        />
+        <Text size="7">Here is your Invoice :)</Text>
+        <CustomButton size="2" text="Print" color="red"></CustomButton>
+        <br />
+        <InvoicePaid />
+        <br />
         <Button size="2" variant="classic">
-          Let's go!!
-        </Button>
-        <Button size="3" radius="small" color="blue">
-          Here we go!!
+          Home
         </Button>
       </Flex>
-      <Text>My Radix Button</Text>
-      <RadixButton text="Submit" color="red"></RadixButton>
     </Theme>
   );
 }
